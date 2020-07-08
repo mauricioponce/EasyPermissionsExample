@@ -18,7 +18,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Inicialización del log
         initLog();
+
+        // Se hace la petición explícita de los permisos
+        requiresTwoPermission();
     }
 
     private void initLog() {
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @AfterPermissionGranted(RC_CAMERA_AND_LOCATION)
-    private void methodRequiresTwoPermission() {
+    private void requiresTwoPermission() {
         String[] perms = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         if (EasyPermissions.hasPermissions(this, perms)) {
 
