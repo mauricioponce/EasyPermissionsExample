@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EasyPermissionsExample</string>
+    <string name="camera_and_location_rationale">Precisamos el permiso para utilizar la cámara para brindar una mejor experiencia</string>
+</resources>
